@@ -14,7 +14,7 @@ passport.serializeUser(function (user, done) {
 passport.deserializeUser(function (user, done) {
     done(null, user);
 });
-//Dados do Google Credenciais criado para testes
+//Dados do Google Credenciais
 passport.use(new GoogleStrategy({
     clientID: process.env.Google_ClientID,
     clientSecret: process.env.Google_ClientSecret,
@@ -28,6 +28,7 @@ passport.use(new GoogleStrategy({
 
 //FACEBOOK SETUP
 
+//Dados do Facebook Credenciais 
 passport.use(new FacebookStrategy({
     clientID: process.env.Facebook_ClientID,
     clientSecret: process.env.Facebook_ClientSecret,

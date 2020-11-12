@@ -5,7 +5,7 @@ class Email {
     //Função de enviar o email
     sendEmail(request) {
         //Pegando os dados necessarios
-        const { email, title, new_password } = request.body;
+        const { email, new_password } = request.body;
 
         //Criando o email
         var transporter = nodemailer.createTransport({
@@ -27,10 +27,9 @@ class Email {
             html: body.Email_html
         };
         //Enviando o email
-        transporter.sendMail(mailOptions) //function (error, info)
+        transporter.sendMail(mailOptions)
     }
 
 }
-
 module.exports = Email;
 
