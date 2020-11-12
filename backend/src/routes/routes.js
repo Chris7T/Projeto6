@@ -76,10 +76,10 @@ routes.post('/register', users.register);
 routes.get('/list', users.list);
 
 //Rota de update de senha do USUARIOS
-routes.post('/password/update', users.update_pass);
+routes.put('/password/update', users.update_pass);
 
 //Rota de recuperação de senha via EMAIL
-routes.post('/password/recover',users.recover_pass)
+routes.put('/password/recover',users.recover_pass)
 
 //Rota retorno da recuperação de senha via EMAIL
 routes.get('/password/recover/callback/:email',(request,response)=>{
@@ -89,17 +89,17 @@ routes.get('/password/recover/callback/:email',(request,response)=>{
 //Rota de registrar HOSPITAIS
 routes.post('/hospital/register',hospital.register)
 
-//Rota de listar HOSPITAIS
-routes.get('/hospital/list',hospital.list)
-
 //Rota de verificar HOSPITAIS
 routes.post('/hospital/login',hospital.login)
 
+//Rota de listar HOSPITAIS
+routes.get('/hospital/list',hospital.list)
+
 //Rota de update de senha do HOSPITAIS
-routes.post('/hospital/password/update',hospital.update_pass)
+routes.put('/hospital/password/update',hospital.update_pass)
 
 //Rota de recuperação de senha via EMAIL
-routes.post('/hospital/password/recover',hospital.recover_pass)
+routes.put('/hospital/password/recover',hospital.recover_pass)
 
 //Exportando as rotas
 module.exports = routes;
