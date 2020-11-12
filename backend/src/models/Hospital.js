@@ -42,4 +42,4 @@ class Hospital {
         return result;
     }
 }
-module.exports = Hospital;//Exportando a Classe de Usuario
+module.exports = Hospital;//Exportando a Classe de Hospital
